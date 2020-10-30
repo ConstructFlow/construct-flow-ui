@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://construct-flow-ui/./src/index.js"],"names":["console","log"],"mappings":"AAAmBA,QAAQC,IAAI","file":"main.bundle.js","sourcesContent":["const test = () => console.log('test hello world!');\n\ntest();"],"sourceRoot":""}
