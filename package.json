@@ -16,18 +16,12 @@
     "css",
     "framework"
   ],
-  "author": "Dmytro Holiak",
+  "author": "Dmytro Holiak <dima.holiak@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ConstructFlow/construct-flow-ui/issues"
   },
   "homepage": "https://github.com/ConstructFlow/construct-flow-ui#readme",
-  "devDependencies": {
-    "html-webpack-plugin": "^4.5.0",
-    "webpack": "^5.3.2",
-    "webpack-cli": "^4.1.0"
-  },
-  "dependencies": {
-    "lodash": "^4.17.20"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
