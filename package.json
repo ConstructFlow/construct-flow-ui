@@ -1,0 +1,27 @@
+{
+  "name": "construct-flow-ui",
+  "version": "1.0.0",
+  "description": "css framework for different goals",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --config prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConstructFlow/construct-flow-ui.git"
+  },
+  "keywords": [
+    "css",
+    "framework"
+  ],
+  "author": "Dmytro Holiak <dima.holiak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConstructFlow/construct-flow-ui/issues"
+  },
+  "homepage": "https://github.com/ConstructFlow/construct-flow-ui#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
