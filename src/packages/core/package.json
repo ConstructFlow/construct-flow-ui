@@ -1,0 +1,17 @@
+{
+  "name": "@construct-flow/core",
+  "version": "1.0.0",
+  "description": "css library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "construct-flow",
+    "css",
+    "js",
+    "css-library"
+  ],
+  "author": "Dmytro Holiak <dima.holiak@gmail.com>",
+  "license": "MIT"
+}
