@@ -5,8 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "build": "webpack --config prod.config.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,8 @@
     "url": "https://github.com/ConstructFlow/construct-flow-ui/issues"
   },
   "homepage": "https://github.com/ConstructFlow/construct-flow-ui#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.1"
+  },
   "dependencies": {}
 }
