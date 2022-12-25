@@ -1,40 +1,65 @@
 {
-  "name": "construct-flow-ui",
-  "version": "1.0.0",
-  "description": "css framework for different goals",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "lint": "./node_modules/.bin/eslint *.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ConstructFlow/construct-flow-ui.git"
-  },
-  "keywords": [
-    "css",
-    "framework"
-  ],
-  "author": "Dmytro Holiak <dima.holiak@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ConstructFlow/construct-flow-ui/issues"
-  },
-  "homepage": "https://github.com/ConstructFlow/construct-flow-ui#readme",
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "jest": "^26.6.1",
-    "prettier": "^2.1.2"
-  },
-  "dependencies": {}
+    "name": "construct-flow-ui",
+    "version": "1.0.0",
+    "description": "css framework for different goals",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "lint": "./node_modules/.bin/eslint *.js",
+        "prettier": "prettier --config .prettierrc --write *.js",
+        "doc": "esdoc --out docs/src/ --readme ./README.md",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+        "precommit": "npm run prettier",
+        "prepush": "call npm run lint && call npm run test",
+        "commit": "git-cz"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ConstructFlow/construct-flow-ui.git"
+    },
+    "keywords": [
+        "css",
+        "framework"
+    ],
+    "author": "Dmytro Holiak <dima.holiak@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ConstructFlow/construct-flow-ui/issues"
+    },
+    "homepage": "https://github.com/ConstructFlow/construct-flow-ui#readme",
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "commitizen": "^4.2.2",
+        "conventional-changelog-cli": "^2.1.1",
+        "cz-conventional-changelog": "^3.3.0",
+        "esdoc": "^1.1.0",
+        "eslint": "^7.2.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.21.5",
+        "eslint-plugin-react-hooks": "^4.0.0",
+        "husky": "^4.3.0",
+        "jest": "^26.6.1",
+        "lerna": "^3.22.1",
+        "prettier": "^2.1.2"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "precommit": "npm run lint",
+            "prepush": "call npm run lint && call npm run test"
+        }
+    }
 }
