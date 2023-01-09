@@ -9,20 +9,67 @@ body {
   font-family: Poppins;
 }
 
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
 a {
   text-decoration: none;
 }
 
-hr {
-  border: 0;
-  border-top: 1px dotted #efefef;
+@media (min-width: 0) {
+  .test-div {
+    color: red;
+  }
+}
+@media (min-width: 480px) {
+  .test-div {
+    color: blue;
+  }
+}
+@media (min-width: 720px) {
+  .test-div {
+    color: green;
+  }
+}
+@media (min-width: 960px) {
+  .test-div {
+    color: purple;
+  }
+}
+@media (min-width: 1200px) {
+  .test-div {
+    color: pink;
+  }
+}
+@media (min-width: 1400) {
+  .test-div {
+    color: yellow;
+  }
 }
 
-img {
-  max-width: 100%;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.space-2 > * {
+  padding: 20px;
+}
+
+.space-2 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (min-width: 720px) {
+  .col-3-md {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 25%;
+  }
 }
