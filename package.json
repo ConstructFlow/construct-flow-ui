@@ -62,5 +62,8 @@
             "precommit": "npm run lint",
             "prepush": "call npm run lint && call npm run test"
         }
+    },
+    "dependencies": {
+        "node-sass": "^8.0.0"
     }
 }
