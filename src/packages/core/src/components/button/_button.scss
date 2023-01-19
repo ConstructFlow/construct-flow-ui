@@ -1,0 +1,256 @@
+@use "../../global/variables";
+@use "../../global/colors";
+
+@-webkit-keyframes rotating /* Safari and Chrome */
+{
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: variables.$base-font-size;
+  border: none;
+  background: colors.$color-gray-40;
+  border-radius: variables.$border-radius;
+  color: colors.$color-gray-70;
+  padding: variables.$button-height-spacing variables.$button-width-spacing;
+  transition: background-color 0.2s linear;
+  min-height: 1.5rem;
+  margin: 0 0 0.5rem 0;
+
+
+  &:hover {
+    background: colors.$color-gray-50;
+    color: colors.$color-gray-80;
+  }
+
+  &--primary {
+    @extend .button;
+    background: colors.$color-blue-40;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-blue-50;
+      color: colors.$color-white;
+    }
+  }
+
+  &--danger {
+    @extend .button;
+    background: colors.$color-red-40;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-red-50;
+      color: colors.$color-white;
+    }
+  }
+
+  &--success {
+    @extend .button;
+    background: colors.$color-green-40;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-green-50;
+      color: colors.$color-white;
+    }
+  }
+
+  &--dark {
+    @extend .button;
+    background: colors.$color-gray-70;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-gray-80;
+      color: colors.$color-white;
+    }
+  }
+
+  &--gray {
+    @extend .button;
+    background: colors.$color-gray-40;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-gray-50;
+      color: colors.$color-white;
+    }
+  }
+
+  &--brown {
+    @extend .button;
+    background: colors.$color-brown-50;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-brown-60;
+      color: colors.$color-white;
+    }
+  }
+
+  &--green {
+    @extend .button;
+    background: colors.$color-green-50;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-green-60;
+      color: colors.$color-white;
+    }
+  }
+
+  &--blue {
+    @extend .button;
+    background: colors.$color-blue-50;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-blue-60;
+      color: colors.$color-white;
+    }
+  }
+
+  &--turquoise {
+    @extend .button;
+    background: colors.$color-turquoise-40;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-turquoise-50;
+      color: colors.$color-white;
+    }
+  }
+
+  &--violet {
+    @extend .button;
+    background: colors.$color-violet-40;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-violet-50;
+      color: colors.$color-white;
+    }
+  }
+
+  &--yellow {
+    @extend .button;
+    background: colors.$color-yellow-60;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-yellow-80;
+      color: colors.$color-white;
+    }
+  }
+
+  &--orange {
+    @extend .button;
+    background: colors.$color-orange-50;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-orange-60;
+      color: colors.$color-white;
+    }
+  }
+
+  &--pink {
+    @extend .button;
+    background: colors.$color-pink-50;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-pink-60;
+      color: colors.$color-white;
+    }
+  }
+
+  &--red {
+    @extend .button;
+    background: colors.$color-red-50;
+    color: colors.$color-white;
+
+    &:hover {
+      background: colors.$color-red-60;
+      color: colors.$color-white;
+    }
+  }
+
+  &--loading {
+    @extend .button;
+    position: relative;
+    cursor: default;
+    text-shadow: none !important;
+    color: transparent !important;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0s linear, opacity .1s ease;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: calc(50% - 1.25rem / 2);
+      left: calc(50% - 1.25rem / 2);
+      width: 1rem;
+      height: 1rem;
+      border-radius: 500rem;
+      border-top-left-radius: 500rem;
+      border-top-right-radius: 500rem;
+      border-bottom-right-radius: 500rem;
+      border-bottom-left-radius: 500rem;
+      border: 0.2em solid rgba(0, 0, 0, .15);
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: calc(50% - 1.25rem / 2);
+      left: calc(50% - 1.25rem / 2);
+      width: 1rem;
+      height: 1rem;
+      -webkit-animation: rotating .6s linear;
+      animation: rotating .6s linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      border-radius: 500rem;
+      border-top-left-radius: 500rem;
+      border-top-right-radius: 500rem;
+      border-bottom-right-radius: 500rem;
+      border-bottom-left-radius: 500rem;
+      border-color: #fff transparent transparent;
+      border-style: solid;
+      border-width: 0.2em;
+      box-shadow: 0 0 0 1px transparent;
+    }
+  }
+
+}

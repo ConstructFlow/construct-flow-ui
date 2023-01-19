@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Colors variables Should has correct query for breakpoint 1`] = `
+"@media (min-width: 0) {
+  .testBreakpoint__xs {
+    color: red;
+  }
+}
+
+@media (min-width: 480px) {
+  .testBreakpoint__sm {
+    color: blue;
+  }
+}
+
+@media (min-width: 720px) {
+  .testBreakpoint__md {
+    color: green;
+  }
+}
+
+@media (min-width: 960px) {
+  .testBreakpoint__lg {
+    color: yellow;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testBreakpoint__xl {
+    color: aqua;
+  }
+}
+
+@media (min-width: 1400px) {
+  .testBreakpoint__specific-size {
+    color: black;
+  }
+}"
+`;
