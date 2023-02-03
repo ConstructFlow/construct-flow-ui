@@ -2,10 +2,10 @@
 @import './src/global/base';
 // colors
 @import './src/global/colors';
-
 // components (button, card, navbar)
 @import "./src/components/button/button";
-
+@import "./src/components/card/card";
+@import "./src/components/nav-menu/nav-menu";
 // utilities (margin, padding, opacity)
 @import './src/global/breakpoints';
 
