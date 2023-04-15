@@ -3,7 +3,8 @@ name: Deploy to Cloud Run
 on:
   push:
     branches:
-      - main
+      - master
+      - 'feature/**'
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   APP_ID: construct-ui-deployment
