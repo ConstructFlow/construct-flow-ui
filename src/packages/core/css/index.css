@@ -27,7 +27,7 @@ img {
   max-width: 100%;
 }
 
-@-webkit-keyframes rotating /* Safari and Chrome */ {
+@-webkit-keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -67,6 +67,11 @@ img {
   transition: background-color 0.2s linear;
   min-height: 1.5rem;
   margin: 0 0 0.5rem 0;
+}
+.button[disabled], [disabled].button--loading, [disabled].button--red, [disabled].button--pink, [disabled].button--orange, [disabled].button--yellow, [disabled].button--violet, [disabled].button--turquoise, [disabled].button--blue, [disabled].button--green, [disabled].button--brown, [disabled].button--gray, [disabled].button--dark, [disabled].button--success, [disabled].button--danger, [disabled].button--primary, .button:disabled, .button--loading:disabled, .button--red:disabled, .button--pink:disabled, .button--orange:disabled, .button--yellow:disabled, .button--violet:disabled, .button--turquoise:disabled, .button--blue:disabled, .button--green:disabled, .button--brown:disabled, .button--gray:disabled, .button--dark:disabled, .button--success:disabled, .button--danger:disabled, .button--primary:disabled {
+  cursor: none;
+  pointer-events: none;
+  opacity: 0.7;
 }
 .button:hover, .button--loading:hover, .button--red:hover, .button--pink:hover, .button--orange:hover, .button--yellow:hover, .button--violet:hover, .button--turquoise:hover, .button--blue:hover, .button--green:hover, .button--brown:hover, .button--gray:hover, .button--dark:hover, .button--success:hover, .button--danger:hover, .button--primary:hover {
   background: #adb5bd;
@@ -227,6 +232,22 @@ img {
   border-style: solid;
   border-width: 0.2em;
   box-shadow: 0 0 0 1px transparent;
+}
+.button--mini {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+.button--small {
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+}
+.button--medium {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.button--large {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
 }
 
 .card {
