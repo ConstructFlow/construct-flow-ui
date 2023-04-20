@@ -1,18 +1,10 @@
 version: 2.1
-
-jobs:
-  test:
-    executor:
-      name: node/default
-      tag: '16.13.2'
-    steps:
-      - checkout
-      - run:
-          name: Run tests
-          command: |
-            if [[ ! -z $CIRCLE_PULL_REQUEST ]] ; then
-              npm run test
-            fi
-
-
-
+orbs:
+  node: circleci/node@5.0.3
+workflows:
+  sample: # This is the name workflow, feel free to change it to better match you workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - node/test:
+          version: '16.13.2'
+          pkg-manager: npm
