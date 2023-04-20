@@ -4,6 +4,10 @@
     "description": "css framework for different goals",
     "private": true,
     "main": "index.js",
+    "engines": {
+        "node": "16.13.2",
+        "npm": "8.1.0"
+    },
     "scripts": {
         "test": "jest",
         "lint": "./node_modules/.bin/eslint *.js",
