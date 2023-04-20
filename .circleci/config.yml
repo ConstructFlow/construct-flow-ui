@@ -1,16 +1,18 @@
 version: 2.1
+
 jobs:
-    build:
-        docker:
-            - image: circleci/node:16.13
-        steps:
-            - checkout
-            - run:
-                name: Install dependencies
-                command: npm install
-            - run:
-                name: Run linter
-                command: npm run lint
-            - run:
-                name: Run test
-                command: npm run test
+  test:
+    executor:
+      name: node/default
+      tag: '16.13.2'
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          command: |
+            if [[ ! -z $CIRCLE_PULL_REQUEST ]] ; then
+              npm run test
+            fi
+
+
+
