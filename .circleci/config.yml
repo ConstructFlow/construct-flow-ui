@@ -21,16 +21,16 @@ jobs:
   test:
     executor:
       name: node/default
-      tag: 16.13.2
+      tag: '16.13.2'
     steps:
       - checkout
       - run:
           name: Run tests
           command: |
             if [[ ! -z $CIRCLE_PULL_REQUEST ]] ; then
+              npm install
               npm test
             fi
-
 
 workflows:
   deploy:
