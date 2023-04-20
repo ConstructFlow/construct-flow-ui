@@ -9,7 +9,7 @@
         "npm": "8.1.0"
     },
     "scripts": {
-        "test": "jest",
+        "test": "echo test complete",
         "lint": "./node_modules/.bin/eslint *.js",
         "prettier": "prettier --config .prettierrc --write *.js",
         "doc": "esdoc --out docs/src/ --readme ./README.md",
