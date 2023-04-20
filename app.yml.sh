@@ -2,7 +2,7 @@
 echo """
 runtime: nodejs
 env: flex
-service: $GCLOUD_APP_SERVICE
+service: $GCP_APP_SERVICE
 resources:
   cpu: 2
   memory_gb: 2.3
