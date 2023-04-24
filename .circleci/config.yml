@@ -1,16 +1,47 @@
 version: 2.1
+orbs:
+  node: circleci/node@5.0.3
+
 jobs:
-  build:
+  deploy:
     docker:
-      - image: circleci/node:16.13
+      - image: google/cloud-sdk
+    working_directory: ~/repo
     steps:
       - checkout
       - run:
-          name: Install dependencies
-          command: npm install
+          name: Create app.yml
+          command: chmod +x app.yml.sh && ./app.yml.sh > ./app.yml
       - run:
-          name: Run linter
-          command: npm run lint
+          name: Set up GCP
+          command: |
+            echo $GCP_SERVICE_KEY | base64 --decode | gcloud auth activate-service-account --key-file=-
+              gcloud --quiet config set project ${GCP_PROJECT_ID}
+              gcloud --quiet config set compute/zone ${GCP_COMPUTE_ZONE}
+  test:
+    executor:
+      name: node/default
+      tag: '16.13.2'
+    steps:
+      - checkout
       - run:
-          name: Run test
-          command: npm run test
+          name: Run tests
+          command: |
+            if [[ ! -z $CIRCLE_PULL_REQUEST ]] ; then
+              yarn install
+              yarn run test
+            fi
+
+workflows:
+  deploy:
+    jobs:
+      - test:
+          name: test
+      - deploy:
+          name: deploy-staging
+          requires:
+            - test
+          post-steps:
+            - run:
+                name: Deploy app
+                command: gcloud app deploy app.yml
