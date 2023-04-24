@@ -4,6 +4,10 @@
     "description": "css framework for different goals",
     "private": true,
     "main": "index.js",
+    "engines": {
+        "node": "16.13.2",
+        "npm": "8.1.0"
+    },
     "scripts": {
         "test": "jest",
         "lint": "./node_modules/.bin/eslint *.js",
@@ -49,6 +53,7 @@
         "husky": "^4.3.0",
         "jest": "^26.6.1",
         "lerna": "^3.22.1",
+        "node-sass": "^8.0.0",
         "prettier": "^2.1.2"
     },
     "config": {
