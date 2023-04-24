@@ -17,8 +17,8 @@
     "precommit": "npm run prettier",
     "prepush": "call npm run lint && call npm run test",
     "commit": "git-cz",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "workspaces": [
     "packages/*"
@@ -38,20 +38,11 @@
   },
   "homepage": "https://github.com/ConstructFlow/construct-flow-ui#readme",
   "devDependencies": {
-    "@babel/core": "^7.21.3",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-docs": "^6.4.22",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-webpack4": "^6.5.16",
-    "@storybook/manager-webpack4": "^6.5.16",
-    "@storybook/web-components": "^6.5.16",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.3.0",
     "commitizen": "^4.2.2",
     "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
-    "esdoc": "^0.0.2",
+    "esdoc": "^1.1.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
@@ -62,10 +53,8 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^4.3.0",
-    "jest": "^29.3.1",
-    "lerna": "^6.6.1",
-    "lit-html": "^2.7.0",
-    "node-sass": "^8.0.0",
+    "jest": "^26.6.1",
+    "lerna": "^3.22.1",
     "prettier": "^2.1.2"
   },
   "config": {
