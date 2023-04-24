@@ -77,6 +77,6 @@
   },
   "dependencies": {
     "http-server": "^14.1.1",
-    "node-sass": "^8.0.0"
+    "jest-environment-node-single-context": "^29.0.0"
   }
 }
