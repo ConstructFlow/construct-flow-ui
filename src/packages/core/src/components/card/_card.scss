@@ -1,0 +1,21 @@
+@use "../../global/spacing" as space;
+@use "../../global/variables";
+@use "../../global/colors";
+
+.card {
+  overflow: hidden;
+  border-radius: variables.$border-radius;
+  box-shadow: 0 1px 3px 0 colors.$color-gray-30, 0 0 0 1px colors.$color-gray-30;
+
+  &__content {
+    color: colors.$color-gray-70;
+    padding: space.$space-base;
+    font-size: variables.$base-font-size;
+  }
+
+  &__footer {
+    color: colors.$color-gray-60;
+    padding: 0 space.$space-base space.$space-base;
+    font-size: variables.$font-size-sm;
+  }
+}

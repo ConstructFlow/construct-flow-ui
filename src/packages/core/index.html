@@ -1,25 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel="stylesheet" href="./packages/core/css/index.css">
-    <title>Getting Started</title>
-  </head>
-  <body>
-      <h1>
-      <a href="#">Getting started</a>
-      </h1>
-      <div class="test-div">
-          HELLO WORLD!
-      </div>
-      <h2>Grid system</h2>
+<head>
+  <title>Getting Started</title>
 
-    <div class="container">
-      <div class="row space-2">
-          <div class="col-3-md col-lg-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eum. Pariatur, quaerat suscipit. Quibusdam cum adipisci rem sint aspernatur consectetur at rerum praesentium, voluptatibus, iusto dolores nulla reprehenderit libero numquam!</div>
-          <div class="col-3-md col-lg-3">Distinctio temporibus eaque excepturi deleniti quo sunt in quod velit qui commodi, adipisci ut hic nulla voluptas explicabo a consequuntur. Expedita suscipit maiores asperiores totam ab nemo optio nobis ut?</div>
-          <div class="col-3-md col-lg-3">Dignissimos est maxime voluptates eligendi voluptatibus minima ut doloribus labore omnis voluptas nisi, ducimus earum, odit perferendis similique amet nemo officiis veritatis! Necessitatibus, hic quaerat? Dolores recusandae tenetur quidem cumque!</div>
-          <div class="col-3-md col-lg-3">Autem, maiores! Neque mollitia suscipit qui cum dicta at beatae maiores assumenda omnis quia ab nemo fugiat exercitationem quae rerum ullam sequi molestiae sunt necessitatibus, modi cumque. Facere, fugit animi?</div>
-          </div>
+  <link href='../core/css/index.css' rel='stylesheet'>
+</head>
+<body>
+<div class='nav-menu--dark'>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur blanditiis voluptas!
+  Aspernatur consectetur cum delectus dolor doloremque eius et, ipsa laborum minus, nesciunt nisi
+  recusandae, rem repudiandae soluta voluptas!
+  <div class='nav-menu__item'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+    aliquid aspernatur consequuntur distinctio doloribus ea et in inventore ipsa laudantium minima,
+    modi nobis nulla perspiciatis porro praesentium repudiandae sint voluptate!
+  </div>
+  <div class='nav-menu__item'>Aliquid assumenda commodi, consectetur dolorem doloremque earum eum
+    fugiat, harum in nam, nulla pariatur similique velit veritatis vero. Aperiam aspernatur earum
+    error illum impedit porro quam quasi, soluta suscipit totam.
+  </div>
+  <div class='nav-menu__item'>Ad, at corporis dicta dignissimos dolor ducimus eligendi excepturi
+    magnam maxime nam nemo neque nihil nobis nostrum placeat porro possimus quo ratione rem sequi
+    soluta, suscipit temporibus tenetur ut veritatis.
+  </div>
+  <div class='nav-menu__item'>Animi eaque eos maxime quis sunt vel veritatis. Ab animi consectetur
+    dignissimos doloribus ducimus eaque hic, ipsum, maiores minus nesciunt nostrum officiis quod
+    reiciendis reprehenderit rerum similique temporibus vitae voluptatem?
+  </div>
+</div>
+<div class='container'>
+  <h1>
+    <a href='#'>Getting started</a>
+  </h1>
+  <div class='test-div'>
+    HELLO WORLD!
+  </div>
+  <h2>Grid system</h2>
+  <div class='grid__row'>
+    <div class='grid__column--3-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      Perspiciatis, eum. Pariatur, quaerat suscipit. Quibusdam cum adipisci rem sint aspernatur
+      consectetur at rerum praesentium, voluptatibus, iusto dolores nulla reprehenderit libero
+      numquam!
+    </div>
+    <div class='grid__column--3-md'>Distinctio temporibus eaque excepturi deleniti quo sunt in quod
+      velit qui commodi, adipisci ut hic nulla voluptas explicabo a consequuntur. Expedita suscipit
+      maiores asperiores totam ab nemo optio nobis ut?
+    </div>
+    <div class='grid__column--3-md'>Dignissimos est maxime voluptates eligendi voluptatibus minima
+      ut doloribus labore omnis voluptas nisi, ducimus earum, odit perferendis similique amet nemo
+      officiis veritatis! Necessitatibus, hic quaerat? Dolores recusandae tenetur quidem cumque!
+    </div>
+    <div class='grid__column--3-md'>Autem, maiores! Neque mollitia suscipit qui cum dicta at beatae
+      maiores assumenda omnis quia ab nemo fugiat exercitationem quae rerum ullam sequi molestiae
+      sunt necessitatibus, modi cumque. Facere, fugit animi?
+    </div>
+  </div>
+  <div class='col-6-md col-lg-6'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Perspiciatis, eum. Pariatur, quaerat suscipit. Quibusdam cum adipisci rem sint aspernatur
+    consectetur at rerum praesentium, voluptatibus, iusto dolores nulla reprehenderit libero
+    numquam!
+
+    <div class='button'>Button</div>
+    <div class='button--primary'>Button</div>
+    <div class='button--danger'>Button</div>
+    <div class='button--success'>Button</div>
+    <div class='button--dark'>Button</div>
+    <div class='button--gray'>Button</div>
+    <div class='button--brown'>Button</div>
+    <div class='button--green'>Button</div>
+    <div class='button--blue'>Button</div>
+    <div class='button--turquoise'>Button</div>
+    <div class='button--violet'>Button</div>
+    <div class='button--yellow'>Button</div>
+    <div class='button--orange'>Button</div>
+    <div class='button--pink'>Button</div>
+    <div class='button--red'>Button</div>
+    <div class='button--primary button--loading'>Button</div>
+  </div>
+
+  <div class='grid__row'>
+    <div class='grid__column--3-md'>
+      <div class='card'>
+        <div class='card__image'>
+          <img src='/src/packages/core/src/assets/images/robot_avatar.png' alt=''>
+        </div>
+        <div class='card__content'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi, dolorum eius
+          eveniet, maiores modi necessitatibus, neque obcaecati provident quis tempora tenetur
+          veritatis! Autem, commodi dignissimos eveniet magnam perspiciatis totam.
+        </div>
+
+        <div class='card__footer'>Published 2 days ago</div>
       </div>
-  </body>
+    </div>
+    <div class='grid__column--3-md'>
+      <div class='card'>
+        <div class='card__image'>
+          <img src='/src/packages/core/src/assets/images/robot_avatar.png' alt=''>
+        </div>
+        <div class='card__content'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi, dolorum eius
+          eveniet, maiores modi necessitatibus, neque obcaecati provident quis tempora tenetur
+          veritatis! Autem, commodi dignissimos eveniet magnam perspiciatis totam.
+        </div>
+
+        <div class='card__footer'>Published 2 days ago</div>
+      </div>
+    </div>
+    <div class='grid__column--3-md'>
+      <div class='card'>
+        <div class='card__image'>
+          <img src='/src/packages/core/src/assets/images/robot_avatar.png' alt=''>
+        </div>
+        <div class='card__content'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi, dolorum eius
+          eveniet, maiores modi necessitatibus, neque obcaecati provident quis tempora tenetur
+          veritatis! Autem, commodi dignissimos eveniet magnam perspiciatis totam.
+        </div>
+        <div class='card__footer'>Published 2 days ago</div>
+      </div>
+    </div>
+    <div class='grid__column--3-md'>
+      <div class='card'>
+        <div class='card__image'>
+          <img src='/src/packages/core/src/assets/images/robot_avatar.png' alt=''>
+        </div>
+        <div class='card__content'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi, dolorum eius
+          eveniet, maiores modi necessitatibus, neque obcaecati provident quis tempora tenetur
+          veritatis! Autem, commodi dignissimos eveniet magnam perspiciatis totam.
+        </div>
+
+        <div class='card__footer'>Published 2 days ago</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>

@@ -1,0 +1,70 @@
+@use "../../global/spacing" as space;
+@use "../../global/variables";
+@use "../../global/colors";
+
+.nav-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 260px;
+  overflow-y: auto;
+  padding: space.$space-lg space.$space-base;
+  background: colors.$color-gray;
+
+  &--dark {
+    @extend .nav-menu;
+    background: colors.$color-gray-70;
+    color: colors.$color-white;
+  }
+
+  &--brown {
+    @extend .nav-menu;
+    background: colors.$color-brown-50;
+    color: colors.$color-white;
+  }
+
+  &--green {
+    background: colors.$color-green-50;
+    color: colors.$color-white;
+  }
+
+  &--blue {
+    background: colors.$color-blue-50;
+    color: colors.$color-white;
+  }
+
+  &--blue {
+    background: colors.$color-turquoise-50;
+    color: colors.$color-white;
+  }
+
+  &--violet {
+    background: colors.$color-violet-40;
+    color: colors.$color-white;
+  }
+
+  &--yellow {
+    background: colors.$color-yellow-60;
+    color: colors.$color-white;
+  }
+
+  &--orange {
+    background: colors.$color-orange-50;
+    color: colors.$color-white;
+  }
+
+  &--pink {
+    background: colors.$color-pink-50;
+    color: colors.$color-white;
+  }
+
+  &--red {
+    background: colors.$color-red-50;
+    color: colors.$color-white;
+  }
+
+  &__item {
+    padding: space.$space-sm;
+  }
+}

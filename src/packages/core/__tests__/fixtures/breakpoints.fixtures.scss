@@ -1,0 +1,37 @@
+@import '../../src/global/_breakpoints.scss';
+
+.testBreakpoint__xs {
+    @include xs {
+        color: red;
+    }
+}
+
+.testBreakpoint__sm {
+    @include sm {
+        color: blue;
+    }
+}
+
+.testBreakpoint__md {
+    @include md {
+        color: green;
+    }
+}
+
+.testBreakpoint__lg {
+    @include lg {
+        color: yellow;
+    }
+}
+
+.testBreakpoint__xl {
+    @include xl {
+        color: aqua;
+    }
+}
+
+.testBreakpoint__specific-size {
+    @include breakpoint(1400px) {
+        color: black;
+    };
+}
